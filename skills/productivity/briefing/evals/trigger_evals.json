@@ -1,0 +1,23 @@
+[
+  {"query": "run a briefing to find fresh content on Claude Code and agentic engineering", "should_trigger": true},
+  {"query": "I have a BRIEFING.md config and want to update my research digest", "should_trigger": true},
+  {"query": "scan sources for new articles about AI trends and add them to my briefing archive", "should_trigger": true},
+  {"query": "maintain a curated newsletter tracking agentic AI developments", "should_trigger": true},
+  {"query": "track research on machine learning infrastructure and deduplicate my sources", "should_trigger": true},
+  {"query": "automate content discovery for our team's weekly AI briefing", "should_trigger": true},
+  {"query": "update BRIEFING_LINKS.md and BRIEFING_SECTIONS.md with fresh findings", "should_trigger": true},
+  {"query": "refresh the briefing using my custom BRIEFING.md at /projects/ml-research/BRIEFING.md", "should_trigger": true},
+  {"query": "I need to deduplicate my research sources and archive them with timestamps", "should_trigger": true},
+  {"query": "run /briefing to see what new content has been discovered this week", "should_trigger": true},
+
+  {"query": "summarize this research paper for me", "should_trigger": false},
+  {"query": "write a blog post about recent AI developments", "should_trigger": false},
+  {"query": "find the best articles on prompt engineering", "should_trigger": false},
+  {"query": "create a presentation on machine learning trends", "should_trigger": false},
+  {"query": "explain the difference between these two research papers", "should_trigger": false},
+  {"query": "generate a list of AI conferences happening this year", "should_trigger": false},
+  {"query": "search for recent news about Claude", "should_trigger": false},
+  {"query": "organize my bookmarks and create tags", "should_trigger": false},
+  {"query": "export my reading list to a spreadsheet", "should_trigger": false},
+  {"query": "help me understand agentic AI concepts", "should_trigger": false}
+]

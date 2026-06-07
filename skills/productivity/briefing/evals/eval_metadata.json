@@ -1,0 +1,90 @@
+{
+  "eval_configs": [
+    {
+      "eval_id": 1,
+      "eval_name": "basic-briefing-run",
+      "prompt": "User runs /briefing with standard BRIEFING.md. Skill should plan tasks, spawn research subagents, deduplicate results, and archive to BRIEFING_SECTIONS.md.",
+      "assertions": [
+        {
+          "id": "file_created_sections",
+          "text": "BRIEFING_SECTIONS.md is created/updated with new timestamped entry",
+          "type": "file_exists_and_updated"
+        },
+        {
+          "id": "file_created_links",
+          "text": "BRIEFING_LINKS.md is updated with new URLs appended",
+          "type": "file_appended"
+        },
+        {
+          "id": "deduplication_applied",
+          "text": "Duplicate URLs from existing BRIEFING_LINKS.md are not re-included",
+          "type": "no_duplicate_urls"
+        },
+        {
+          "id": "formatting_correct",
+          "text": "Output follows clean markdown format with per-analysis sections and bullet entries linking to sources",
+          "type": "format_validation"
+        },
+        {
+          "id": "summary_generated",
+          "text": "Summary report shows items found, deduplicated, included per analysis",
+          "type": "summary_present"
+        },
+        {
+          "id": "three_analyses_covered",
+          "text": "All three analyses from BRIEFING.md are represented in output",
+          "type": "analyses_complete"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "first-run-initialization",
+      "prompt": "User has BRIEFING.md but no tracking files. Skill should create BRIEFING_LINKS.md and BRIEFING_SECTIONS.md from scratch.",
+      "assertions": [
+        {
+          "id": "links_initialized",
+          "text": "BRIEFING_LINKS.md is created and populated with discovered URLs",
+          "type": "file_created"
+        },
+        {
+          "id": "sections_initialized",
+          "text": "BRIEFING_SECTIONS.md is created with first timestamped entry",
+          "type": "file_created"
+        },
+        {
+          "id": "no_errors",
+          "text": "Skill handles missing files gracefully without errors",
+          "type": "no_exceptions"
+        },
+        {
+          "id": "initialization_reported",
+          "text": "Summary mentions file initialization",
+          "type": "summary_mentions_init"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "custom-briefing-path",
+      "prompt": "User provides custom BRIEFING.md path via argument. Skill should use that path and write results adjacent to it, not to ~/.claude/",
+      "assertions": [
+        {
+          "id": "correct_path_sections",
+          "text": "BRIEFING_SECTIONS.md is written to custom directory, not ~/.claude/",
+          "type": "file_at_custom_path"
+        },
+        {
+          "id": "correct_path_links",
+          "text": "BRIEFING_LINKS.md is written to custom directory, not ~/.claude/",
+          "type": "file_at_custom_path"
+        },
+        {
+          "id": "path_reported",
+          "text": "Summary confirms custom path was used",
+          "type": "summary_mentions_path"
+        }
+      ]
+    }
+  ]
+}

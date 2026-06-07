@@ -1,0 +1,26 @@
+{
+  "skill_name": "briefing-automation",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "basic-briefing-run",
+      "prompt": "I have a BRIEFING.md at ~/.claude/BRIEFING.md with authors (Boris Cherny), topics (Claude Code), and sites (claude.com/blog). It has three analyses: 'Industry trends that are likely to last', 'Concrete suggestions for how workflow should change to leverage Agentic Engineering', and 'Inspiring usages of Agentic AI'. Run a briefing to discover fresh content on these topics.",
+      "expected_output": "Updated BRIEFING_SECTIONS.md with timestamped entry containing 3-5 items per analysis in Slack-ready format. Updated BRIEFING_LINKS.md with new URLs appended. Summary showing items found per analysis, deduplicated count, filtered count.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "first-run-initialization",
+      "prompt": "I'm setting up a new briefing for the first time. I have BRIEFING.md in ~/.claude/ but no BRIEFING_LINKS.md or BRIEFING_SECTIONS.md yet. The briefing tracks 'agentic-engineering' topic and 'Dario Amodei' author. Run the briefing to initialize and populate both tracking files.",
+      "expected_output": "Both BRIEFING_LINKS.md and BRIEFING_SECTIONS.md created from scratch. BRIEFING_SECTIONS.md has first timestamped entry. BRIEFING_LINKS.md contains all discovered URLs. Summary confirms files were initialized.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "custom-briefing-path",
+      "prompt": "I have a project-specific briefing at /Users/ssanders/Projects/ml-infra/BRIEFING.md. Run the briefing using that config file instead of the default. It tracks 'ML infrastructure' and 'distributed systems' topics.",
+      "expected_output": "Updated /Users/ssanders/Projects/ml-infra/BRIEFING_SECTIONS.md and /Users/ssanders/Projects/ml-infra/BRIEFING_LINKS.md (not the default ~/.claude/ ones). Summary confirms correct paths were used.",
+      "files": []
+    }
+  ]
+}
