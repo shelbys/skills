@@ -1,5 +1,15 @@
 {
-  "name": "mattpocock-skills",
+  "name": "shelbys-skills",
+  "version": "1.0.0",
+  "description": "A collection of skills for improving productivity and workflow management",
+  "author": {
+    "name": "shelbys",
+    "email": "shelbys@gmail.com"
+  },
+  "homepage": "https://github.com/shelbys/skills",
+  "repository": "https://github.com/shelbys/skills",
+  "license": "MIT",
+  "keywords": ["skills", "tdd", "debugging", "collaboration", "best-practices", "workflows"],
   "skills": [
     "./skills/engineering/diagnose",
     "./skills/engineering/grill-with-docs",
@@ -11,9 +21,11 @@
     "./skills/engineering/to-prd",
     "./skills/engineering/zoom-out",
     "./skills/engineering/prototype",
-    "./skills/productivity/caveman",
+    "./skills/productivity/briefing",
     "./skills/productivity/grill-me",
     "./skills/productivity/handoff",
+    "./skills/productivity/terse",
+    "./skills/productivity/verbose",
     "./skills/productivity/write-a-skill"
   ]
 }

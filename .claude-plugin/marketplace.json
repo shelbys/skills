@@ -1,0 +1,22 @@
+{
+  "name": "shelbys-skills",
+  "version": "1.0.0",
+  "description": "Development marketplace for shelbys-skills library",
+  "owner": {
+    "name": "shelbys",
+    "email": "shelbys@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "shelbys-skills",
+      "version": "1.0.0",
+      "category": "productivity",
+      "description": "A collection of skills for improving productivity and workflow management",
+      "source": "./",
+      "author": {
+        "name": "shelbys",
+        "email": "shelbys@gmail.com"
+      }
+    }
+  ]
+}
